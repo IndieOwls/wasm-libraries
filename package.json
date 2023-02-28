@@ -1,0 +1,16 @@
+{
+  "name": "nextquery",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "author": "Denny S. Temple <denny.temple@gmail.com> (https://dentemple.com)",
+  "funding": {
+    "type": "individual",
+    "url": "https://ko-fi.com/dentemple"
+  },
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
