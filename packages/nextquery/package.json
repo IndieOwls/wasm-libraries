@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "homepage": "",
-  "author": "Denny S. Temple <denny.temple@gmail.com> (https://dentemple.com)",
+  "author": "Denny S. Temple",
   "funding": {
     "type": "individual",
     "url": "https://ko-fi.com/dentemple"
@@ -18,7 +18,21 @@
   },
   "license": "MPL-2.0",
   "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.27.1"
   }
 }
